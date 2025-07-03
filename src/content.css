@@ -1,0 +1,73 @@
+div[name=toc-container] {
+    box-sizing: border-box;
+}
+
+div[name=toc-container].sticky {
+    position: fixed;
+    top: 0;
+}
+
+div[name=toc-container].sticky>.BorderGrid-cell {
+    border: none;
+}
+
+.base {
+    display: none;
+}
+
+.base.on {
+    display: block;
+}
+
+#github-toc {
+    font-size: 16px;
+    --main-color: rgb(31, 35, 40);
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+#github-toc a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+#github-toc>ul {
+    padding: 8px 0 20px 0;
+    overflow: auto;
+}
+
+div[name=toc-container].sticky ul {
+    max-height: calc(100vh - calc(var(--gap) * 1px) - calc(var(--gap-bottom, 0) * 1px));
+    width: calc(var(--width) * 1px);
+}
+
+#github-toc>ul>li {
+    padding-right: 10px;
+    color: var(--main-color);
+    border-radius: 5px;
+    list-style-type: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#github-toc>ul>li:hover {
+    color: white;
+    background-color: rgb(244, 246, 248);
+}
+
+#github-toc>ul>li:active {
+    background-color: rgb(9, 105, 218);
+}
+
+#github-toc>ul>li>a {
+    white-space: nowrap;
+}
+
+#github-toc-btns {
+    padding: 8px 1.5rem;
+    font-weight: bold;
+    font-family: "Google Sans", sans-serif;
+    border-bottom: 2px solid #eee;
+    user-select: none;
+}
